@@ -12,6 +12,24 @@
         display: none;
     }
 </style>
+
+    <script>
+function fill_utm_values() {
+  const utm_source = get_utm_source();
+  const utm_medium = get_utm_medium();
+  const utm_campaign = get_utm_campaign();
+  const utm_term = get_utm_term();
+  const utm_content = get_utm_content();
+
+  document.getElementById("utm_source").value = utm_source;
+  document.getElementById("utm_medium").value = utm_medium;
+  document.getElementById("utm_campaign").value = utm_campaign;
+  document.getElementById("utm_term").value = utm_term;
+  document.getElementById("utm_content").value = utm_content;
+}
+
+fill_utm_values();
+</script>
   
   <!-- Site made with Mobirise Website Builder v5.9.0, https://mobirise.com -->
   <meta charset="UTF-8">
