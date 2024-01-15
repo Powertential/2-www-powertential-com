@@ -13,7 +13,7 @@
     }
 </style>
 
- <script>
+<script>
     function getParameterByName(name, url) {
       if (!url) url = window.location.href;
       name = name.replace(/[\[\]]/g, "\\$&");
@@ -32,7 +32,8 @@
       document.getElementsByName('utm_content')[0].value = getParameterByName('utm_content');
     }
 
-    fillUtmValues();
+    // Espera o carregamento completo do documento antes de preencher as UTM
+    window.addEventListener('load', fillUtmValues);
   </script>
   
   <!-- Site made with Mobirise Website Builder v5.9.0, https://mobirise.com -->
