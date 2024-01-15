@@ -13,23 +13,27 @@
     }
 </style>
 
-    <script>
-function fill_utm_values() {
-  const utm_source = get_utm_source();
-  const utm_medium = get_utm_medium();
-  const utm_campaign = get_utm_campaign();
-  const utm_term = get_utm_term();
-  const utm_content = get_utm_content();
+  <script>
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
 
-  document.getElementById("utm_source").value = utm_source;
-  document.getElementById("utm_medium").value = utm_medium;
-  document.getElementById("utm_campaign").value = utm_campaign;
-  document.getElementById("utm_term").value = utm_term;
-  document.getElementById("utm_content").value = utm_content;
-}
+    function fillUtmValues() {
+      document.getElementById('utm_source').value = getParameterByName('utm_source');
+      document.getElementById('utm_medium').value = getParameterByName('utm_medium');
+      document.getElementById('utm_campaign').value = getParameterByName('utm_campaign');
+      document.getElementById('utm_term').value = getParameterByName('utm_term');
+      document.getElementById('utm_content').value = getParameterByName('utm_content');
+    }
 
-fill_utm_values();
-</script>
+    fillUtmValues();
+  </script>
   
   <!-- Site made with Mobirise Website Builder v5.9.0, https://mobirise.com -->
   <meta charset="UTF-8">
