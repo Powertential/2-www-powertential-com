@@ -12,29 +12,6 @@
         display: none;
     }
 </style>
-
-<script>
-    function getParameterByName(name, url) {
-      if (!url) url = window.location.href;
-      name = name.replace(/[\[\]]/g, "\\$&");
-      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-          results = regex.exec(url);
-      if (!results) return null;
-      if (!results[2]) return '';
-      return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-
-    function fillUtmValues() {
-      document.getElementsByName('utm_source')[0].value = getParameterByName('utm_source');
-      document.getElementsByName('utm_medium')[0].value = getParameterByName('utm_medium');
-      document.getElementsByName('utm_campaign')[0].value = getParameterByName('utm_campaign');
-      document.getElementsByName('utm_term')[0].value = getParameterByName('utm_term');
-      document.getElementsByName('utm_content')[0].value = getParameterByName('utm_content');
-    }
-
-    // Espera o carregamento completo do documento antes de preencher as UTM
-    window.addEventListener('load', fillUtmValues);
-  </script>
   
   <!-- Site made with Mobirise Website Builder v5.9.0, https://mobirise.com -->
   <meta charset="UTF-8">
@@ -79,6 +56,21 @@
         </p>
 
 <script async src="https://api.mailbluster.com/v1/forms/9f8401f8-6ded-4d71-a63a-620ae64fff3e.js" data-form="9f8401f8-6ded-4d71-a63a-620ae64fff3e"></script>
+          <script>
+// Script para preencher automaticamente os campos do formulário com as UTMs
+const url = new URL(window.location.href);
+const utms = {
+  source: url.searchParams.get("utm_source"),
+  medium: url.searchParams.get("utm_medium"),
+  term: url.searchParams.get("utm_term"),
+  campaign: url.searchParams.get("utm_campaign"),
+  content: url.searchParams.get("utm_content"),
+};
+const inputs = document.querySelectorAll("input[name='utm_source'], input[name='utm_medium'], input[name='utm_term'], input[name='utm_campaign'], input[name='utm_content']");
+for (const input of inputs) {
+  input.value = utms[input.name];
+}
+</script>
         
       </div>
     </div>
