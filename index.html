@@ -45,21 +45,13 @@
         </p>
 
 <script async src="https://api.mailbluster.com/v1/forms/9f8401f8-6ded-4d71-a63a-620ae64fff3e.js" data-form="9f8401f8-6ded-4d71-a63a-620ae64fff3e"></script>
-          <script>
-// Script para preencher automaticamente os campos do formulário com as UTMs
-const url = new URL(window.location.href);
-const utms = {
-  source: url.searchParams.get("utm_source"),
-  medium: url.searchParams.get("utm_medium"),
-  term: url.searchParams.get("utm_term"),
-  campaign: url.searchParams.get("utm_campaign"),
-  content: url.searchParams.get("utm_content"),
-};
-const inputs = document.querySelectorAll("input[name='utm_source'], input[name='utm_medium'], input[name='utm_term'], input[name='utm_campaign'], input[name='utm_content']");
-for (const input of inputs) {
-  input.value = utms[input.name];
-}
-</script>
+       <script>
+    // Seu código para preencher os campos UTM
+    const inputs = document.querySelectorAll("input[name='utm_source'], input[name='utm_medium'], input[name='utm_term'], input[name='utm_campaign'], input[name='utm_content']");
+    for (const input of inputs) {
+      input.value = utms[input.name];
+    }
+  </script>
         
       </div>
     </div>
