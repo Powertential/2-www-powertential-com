@@ -1,7 +1,28 @@
 <!DOCTYPE html>
 <html  >
 <head>
-  
+  <script>
+    // Função para obter os parâmetros UTM da URL
+    function getUTMParameters() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var utmSource = urlParams.get('utm_source') || '';
+        var utmMedium = urlParams.get('utm_medium') || '';
+        var utmCampaign = urlParams.get('utm_campaign') || '';
+        var utmTerm = urlParams.get('utm_term') || '';
+        var utmContent = urlParams.get('utm_content') || '';
+
+        // Preencher os campos do formulário
+        document.getElementsByName('utm_source')[0].value = utmSource;
+        document.getElementsByName('utm_medium')[0].value = utmMedium;
+        document.getElementsByName('utm_campaign')[0].value = utmCampaign;
+        document.getElementsByName('utm_term')[0].value = utmTerm;
+        document.getElementsByName('utm_content')[0].value = utmContent;
+    }
+
+    // Chamar a função ao carregar a página
+    window.onload = getUTMParameters;
+</script>
+
   <!-- Site made with Mobirise Website Builder v5.9.0, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,23 +66,6 @@
         </p>
 
 <script async src="https://api.mailbluster.com/v1/forms/9f8401f8-6ded-4d71-a63a-620ae64fff3e.js" data-form="9f8401f8-6ded-4d71-a63a-620ae64fff3e"></script>
-     <script>
-function fill_utm_values() {
-  var utm_source = get_utm_source();
-  var utm_medium = get_utm_medium();
-  var utm_campaign = get_utm_campaign();
-  var utm_term = get_utm_term();
-  var utm_content = get_utm_content();
-
-  document.getElementByName("utm_source").value = utm_source;
-  document.getElementByName("utm_medium").value = utm_medium;
-  document.getElementByName("utm_campaign").value = utm_campaign;
-  document.getElementByName("utm_term").value = utm_term;
-  document.getElementByName("utm_content").value = utm_content;
-}
-
-fill_utm_values();
-</script>
         
       </div>
     </div>
