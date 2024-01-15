@@ -45,13 +45,23 @@
         </p>
 
 <script async src="https://api.mailbluster.com/v1/forms/9f8401f8-6ded-4d71-a63a-620ae64fff3e.js" data-form="9f8401f8-6ded-4d71-a63a-620ae64fff3e"></script>
-       <script>
-    // Seu código para preencher os campos UTM
-    const inputs = document.querySelectorAll("input[name='utm_source'], input[name='utm_medium'], input[name='utm_term'], input[name='utm_campaign'], input[name='utm_content']");
-    for (const input of inputs) {
-      input.value = utms[input.name];
-    }
-  </script>
+     <script>
+function fill_utm_values() {
+  var utm_source = get_utm_source();
+  var utm_medium = get_utm_medium();
+  var utm_campaign = get_utm_campaign();
+  var utm_term = get_utm_term();
+  var utm_content = get_utm_content();
+
+  document.getElementByName("utm_source").value = utm_source;
+  document.getElementByName("utm_medium").value = utm_medium;
+  document.getElementByName("utm_campaign").value = utm_campaign;
+  document.getElementByName("utm_term").value = utm_term;
+  document.getElementByName("utm_content").value = utm_content;
+}
+
+fill_utm_values();
+</script>
         
       </div>
     </div>
