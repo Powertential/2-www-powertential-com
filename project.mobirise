@@ -51,8 +51,8 @@
       }
     ],
     "chatbutton": {},
-    "favicon": false,
-    "mbrsiteDomain": "dtxu1chg7d",
+    "favicon": "@PROJECT_PATH@/assets/images/icon.svg",
+    "mbrsiteDomain": "xeyakin9pw",
     "imageResize": true,
     "usedWebp": true,
     "cssOptimize": true,
