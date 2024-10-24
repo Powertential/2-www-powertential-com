@@ -52,11 +52,11 @@
     ],
     "chatbutton": {},
     "favicon": false,
-    "mbrsiteDomain": "r58aoj6hw3",
-    "imageResize": false,
-    "usedWebp": false,
-    "cssOptimize": false,
-    "lazyLoad": false,
+    "mbrsiteDomain": "t5zzdqydtt",
+    "imageResize": true,
+    "usedWebp": true,
+    "cssOptimize": true,
+    "lazyLoad": true,
     "robotsSwitcher": false,
     "sitemapSwitcher": false,
     "sitemapSwitcherAuto": false,
@@ -66,7 +66,10 @@
     "pwa-switcher": false,
     "uniqCompNum": 57,
     "versionPublish": "5.9.18",
-    "screenshot": "screenshot.png"
+    "screenshot": "screenshot.png",
+    "site_lang": "pt-BR",
+    "global_header_custom": "<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-M7RCR2X');</script>\n<!-- End Google Tag Manager -->",
+    "global_after_body": "<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-M7RCR2X\"\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->"
   },
   "pages": {
     "index.html": {
